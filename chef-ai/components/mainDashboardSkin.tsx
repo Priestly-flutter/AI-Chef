@@ -1,5 +1,6 @@
-import { Input } from "@/components/ui/input";
+"use client"
 
+import { Input } from "@/components/ui/input";
 
 // TODO the content of line 12 to line 14 will be updated that the content are gotten from the most popular search per loaction of the user
 

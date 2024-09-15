@@ -13,6 +13,8 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as functions_gemmini from "../functions/gemmini.js";
+import type * as functions_index from "../functions/index.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -22,7 +24,10 @@ import type {
  * const myFunctionReference = api.myModule.myFunction;
  * ```
  */
-declare const fullApi: ApiFromModules<{}>;
+declare const fullApi: ApiFromModules<{
+  "functions/gemmini": typeof functions_gemmini;
+  "functions/index": typeof functions_index;
+}>;
 export declare const api: FilterApi<
   typeof fullApi,
   FunctionReference<any, "public">
